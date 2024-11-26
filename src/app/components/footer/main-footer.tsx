@@ -79,7 +79,6 @@ export default function Footer() {
   ];
 
   return (
-    // <div className={clsx("", className)}>
     <>
       <div className={`${styles.bgcolor} w-screen xs:h-[120vh] md:h-[50vh]`}>
         <div
@@ -296,7 +295,6 @@ export default function Footer() {
           )}
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 }
