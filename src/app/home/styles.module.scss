@@ -1,0 +1,94 @@
+/*------------------------------------------------------------------------ colors ------------------------------------------------------------------------*/
+
+$color-white: #f2f2f2; /* hex 242 242 242 */
+$color-yellow: #f2e96b; /* hex 242 233 107 */
+$color-teal: #99f2e9; /* hex 153 242 233 */
+$color-purple: #777cd9; /* hex 119 124 217 */
+$color-pink: #f2529d; /* hex 242 82 157 */
+$color-red: #f2668b; /* hex 242 102 139 */
+
+$bg-white: rgba($color-white, 1);
+$bg-yellow: rgba($color-yellow, 1);
+$bg-teal: rgba($color-teal, 1);
+$bg-purple: rgba($color-purple, 1);
+$bg-pink: rgba($color-pink, 1);
+$bg-red: rgba($color-red, 1);
+
+@mixin bgwhite {
+  background-color: $bg-white;
+}
+@mixin bgyellow {
+  background-color: $bg-yellow;
+}
+@mixin bgteal {
+  background-color: $bg-teal;
+}
+@mixin bgpurple {
+  background-color: $bg-purple;
+}
+@mixin bgpink {
+  background-color: $bg-pink;
+}
+@mixin bgred {
+  background-color: $bg-red;
+}
+
+/*------------------------------------------------------------------------ end colors ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ backgrounds ------------------------------------------------------------------------*/
+
+@mixin absolutefullscreen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+@mixin fixedfullscreen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+@mixin fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.thebg {
+  @include bgteal;
+  @include absolutefullscreen;
+}
+/*------------------------------------------------------------------------ end backgrounds ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ main content ---------------------------------------------------------------------------*/
+
+.races {
+	width:fit-content;
+	display:flex;
+	flex-wrap:nowrap;
+}
+
+.races h2 {
+	font-family: 'Staatliches', cursive;
+	font-size:30vw;
+	flex-shrink:0;
+	padding-right:0.3em;
+	padding-left:0.3em;
+	color:#e10600;
+	
+	margin:0;	
+}
+
+.races h2:last-of-type {
+	background:#e1e1ff;
+}
+
+/*------------------------------------------------------------------------ end main content ------------------------------------------------------------------------*/
+
+
+.whatsitsuse {
+  z-index: 100;
+  background-color: #f2f2f2;
+}
+
+.alternatingtext {
+  z-index: 600;
+}

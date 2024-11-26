@@ -1,0 +1,78 @@
+/*---------------------------------- colors ----------------------------------*/
+
+$color-white: #f2f2f2; /* hex 242 242 242 */
+$color-yellow: #f2e96b; /* hex 242 233 107 */
+$color-teal: #99f2e9; /* hex 153 242 233 */
+$color-purple: #777cd9; /* hex 119 124 217 */
+$color-pink: #f2529d; /* hex 242 82 157 */
+$color-red: #f2668b; /* hex 242 102 139 */
+
+$bg-white: rgba($color-white, 1);
+$bg-yellow: rgba($color-yellow, 1);
+$bg-teal: rgba($color-teal, 1);
+$bg-purple: rgba($color-purple, 1);
+$bg-pink: rgba($color-pink, 1);
+$bg-red: rgba($color-red, 1);
+
+/*---------------------------------- end colors ----------------------------------*/
+
+/*---------------------------------- burger menu ----------------------------------*/
+.menucontainer {
+  z-index: 1001;
+}
+.button {
+  margin-top: -8px;
+  z-index: 50;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger {
+  width: 100%;
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  &::after {
+    top: -5px;
+  }
+  &::before {
+    top: 5px;
+  }
+}
+
+.burgerHovered {
+  &::after {
+    transform: rotate(60deg);
+    top: -1px;
+    left: -6px;
+    margin-left: 10px;
+  }
+  &::before {
+    transform: rotate(-60deg);
+    top: 0px;
+  }
+}
+
+.burgerActive {
+  &::after {
+    transform: rotate(45deg);
+    top: -1px;
+  }
+  &::before {
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+}
+/*---------------------------------- end burger menu ----------------------------------*/

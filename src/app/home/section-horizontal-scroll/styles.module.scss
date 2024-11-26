@@ -1,0 +1,80 @@
+/*------------------------------------------------------------------------ colors ------------------------------------------------------------------------*/
+
+$color-white: #f2f2f2; /* hex 242 242 242 */
+$color-yellow: #f2e96b; /* hex 242 233 107 */
+$color-teal: #99f2e9; /* hex 153 242 233 */
+$color-purple: #777cd9; /* hex 119 124 217 */
+$color-pink: #f2529d; /* hex 242 82 157 */
+$color-red: #f2668b; /* hex 242 102 139 */
+
+$bg-white: rgba($color-white, 1);
+$bg-yellow: rgba($color-yellow, 1);
+$bg-teal: rgba($color-teal, 1);
+$bg-purple: rgba($color-purple, 1);
+$bg-pink: rgba($color-pink, 1);
+$bg-red: rgba($color-red, 1);
+
+@mixin bgwhite {
+  background-color: $bg-white;
+}
+@mixin bgyellow {
+  background-color: $bg-yellow;
+}
+@mixin bgteal {
+  background-color: $bg-teal;
+}
+@mixin bgpurple {
+  background-color: $bg-purple;
+}
+@mixin bgpink {
+  background-color: $bg-pink;
+}
+@mixin bgred {
+  background-color: $bg-red;
+}
+
+/*------------------------------------------------------------------------ end colors ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ backgrounds ------------------------------------------------------------------------*/
+
+@mixin absolutefullscreen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+@mixin fixedfullscreen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+@mixin fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg1 {
+  @include bgteal;
+}
+.bg2 {
+  @include bgred;
+}
+.bg3 {
+  @include bgpurple;
+}
+
+/*------------------------------------------------------------------------ end backgrounds ------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------ text -----------------------------------------------------------------------------------*/
+
+.txt1 {
+  color: $color-purple;
+}
+
+.txt2 {
+  color: $color-yellow;
+}
+
+.txt3 {
+  color: $color-white;
+}
+/*------------------------------------------------------------------------ end text -------------------------------------------------------------------------------*/

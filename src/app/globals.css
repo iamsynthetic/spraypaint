@@ -2,14 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #f2e96b;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f2e96b;
     --foreground: #ededed;
   }
 }
@@ -18,10 +28,76 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.follow-cursor {
+  position: absolute;
+  z-index: 2002;
+}
+
+.open-sans-100 {
+  font-family: var(--font-opensans);
+  font-weight: 100;
+}
+
+.open-sans-300 {
+  font-family: var(--font-opensans);
+  font-weight: 300;
+}
+
+.open-sans-500 {
+  font-family: var(--font-opensans);
+  font-weight: 500;
+}
+
+.open-sans-700 {
+  font-family: var(--font-opensans);
+  font-weight: 700;
+}
+.open-sans-900 {
+  font-family: var(--font-opensans);
+  font-weight: 900;
+}
+
+.permanent-marker {
+  font-family: var(--font-permanentmarker);
+  font-weight: 400;
+  /* color: #5c5cff; */
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.section3 {
+  z-index: 99;
+}
+
+.section3mask {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
 }
